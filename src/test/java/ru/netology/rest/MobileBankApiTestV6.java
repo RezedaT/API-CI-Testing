@@ -7,6 +7,7 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 class MobileBankApiTestV6 {
     private RequestSpecification requestSpec = new RequestSpecBuilder()
@@ -31,4 +32,5 @@ class MobileBankApiTestV6 {
       .then()
           .statusCode(200);
     }
+
 }
